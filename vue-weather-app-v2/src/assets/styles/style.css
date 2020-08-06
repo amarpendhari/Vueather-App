@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+body {
+  color: #000;
+}
+main {
+  margin: 20px;
+}
+/* Search Bar */
+.search-box {
+  width: 100%;
+}
+input.search-bar {
+  padding: 10px 45px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 18px;
+  height: 45px;
+  position: relative;
+  z-index: 10;
+  -webkit-box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 0.75);
+  border-color: white !important;
+  border-width: 0px;
+  background: url("../images/gps.png") no-repeat left;
+  background-size: 22px;
+  background-position-x: 13px;
+  align-items: center;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+input:active,
+input:focus {
+  box-shadow: 0 0 6pt 1pt blue;
+}
+.search {
+  background: white;
+  border: white;
+  outline: white;
+}
+.search img {
+  width: 20px;
+  position: absolute;
+  right: 34px;
+  top: 32px;
+  cursor: pointer;
+}
+.d-flex {
+  display: flex;
+}
+.d-flex-aic {
+  display: flex;
+  align-items: center;
+}
+.d-flex-aic-jcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-Scroll {
+  text-align: center;
+  height: 110px;
+}
+/* Daily */
+.DDW {
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+}
+.daily {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.today {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.day {
+  height: 21vh;
+  width: 110px;
+  justify-content: center;
+  text-align: center;
+}
+.day button {
+  border: #fff;
+  background: #fff;
+  padding: 5px 10px;
+}
+.day button:active,
+.day button:focus {
+  outline: 2px solid aqua;
+  background: beige;
+}
+span.max {
+  font-weight: 700;
+  margin-right: 6px;
+}
+span.min {
+  opacity: 0.7;
+}
+
+/* Current */
+.Main {
+  margin: 15px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 22px -5px rgba(0, 0, 0, 0.75);
+}
+.Today .weather {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.degrees {
+  font-size: 60px;
+  margin: 15px 0px 5px 20px;
+  font-family: "Poppins", sans-serif;
+}
+.cw {
+  display: grid;
+  text-align: center;
+}
+.mt-25 {
+  margin-top: -25px;
+}
+.p-10 {
+  padding: 10px;
+}
+.HP {
+  margin: auto;
+  padding: 10px 15px;
+  background: #e8f4f8;
+  min-width: 130px;
+}
+.time {
+  margin: 0px 15px -15px 15px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Alert */
+main.hide {
+  opacity: 0.2;
+}
+.alert {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  width: 270px;
+  border-radius: 5px;
+  background: #4d4d4d;
+  text-align: center;
+  color: white;
+  padding: 15px 10px;
+  z-index: 10;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+/* sun img */
+.movingsun {
+  text-align: center;
+}
+.movingsun img {
+  width: 92%;
+  margin: 20px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 850px) {
+  body {
+    max-width: 800px;
+    margin: auto;
+  }
+  input.search-bar {
+    position: relative;
+  }
+  .search {
+    position: absolute;
+  }
+  .search img {
+    right: 24px;
+    top: 11px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .horizontal-Scroll {
+    text-align: center;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+  }
+  .DDW {
+    height: 40vw;
+    transform: none;
+    display: grid;
+  }
+  .daily {
+    transform: none;
+  }
+  .day {
+    width: 90px;
+    justify-content: center;
+    text-align: center;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .DDW {
+    height: 92vw;
+  }
+}
+@media screen and (max-width: 640px) {
+  #app {
+    margin: 20px;
+  }
+  main {
+    max-width: 700px;
+    margin: auto !important;
+  }
+  .DDW {
+    height: 92vw;
+    justify-content: center;
+  }
+  .Today {
+    padding: 10px !important;
+  }
+  .sun {
+    justify-content: space-between;
+  }
+  .search {
+    position: relative;
+  }
+  .search img {
+    right: 20px !important;
+    top: -18px !important;
+  }
+  .day {
+    width: 110px;
+  }
+  .degree-img {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .day {
+    width: 93px;
+  }
+  .DDW {
+    height: 88vw;
+  }
+  .movingsun img {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 375px) {
+  * {
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .horizontal-Scroll {
+    height: 100px;
+  }
+  .HP {
+    min-width: 110px;
+  }
+  .day {
+    width: 105px;
+  }
+}
